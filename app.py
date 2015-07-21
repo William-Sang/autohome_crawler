@@ -34,12 +34,10 @@ for brand_tag in brands_tag:
     cars = []
     brand_name  = brand_tag.get_text(',').split(',')[0]
     brand_href = domain + brand_tag.a['href']
-    print '品牌名称为:', brand_name
-    print ' 品牌链接为:', brand_href
+    #print u' 品牌名称为:', brand_name
+    #print u' 品牌链接为:', brand_href
     cars =  get_cars(brand_name, brand_href)
     print json.dumps(cars)
     for car in cars:
         output_file.write(json.dumps(car))
         output_file.write('\n')
-
-    exit()
