@@ -3,9 +3,9 @@
 本项目主要用于介绍使用 requests 和 BeautifulSoup 进行爬虫开发
 
 
-* requests 文档:[http://docs.python-requests.org/en/latest/](http://docs.python-requests.org/en/latest/)
-* BeautifulSoup 文档:[http://www.crummy.com/software/BeautifulSoup/bs4/doc/](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-
+* requests 文档: [http://docs.python-requests.org/en/latest/](http://docs.python-requests.org/en/latest/)
+* BeautifulSoup 文档: [http://www.crummy.com/software/BeautifulSoup/bs4/doc/](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+* Chrome DevTools 文档: [https://developer.chrome.com/devtools](https://developer.chrome.com/devtools)
 
 ### 使用须知
 1. clone 本项目
