@@ -22,7 +22,6 @@ def get_cars(brand_name, start_url):
         html_content = result.content.decode('gbk').encode('utf-8')
         html_content_soup = BeautifulSoup(html_content, 'html.parser')
         cars_tag = html_content_soup.find_all(class_='list-cont-bg')
-        #print ' 输出链接',  html_content_soup.find(class_='tab-content fn-visible').find(class_='page-item-next')
         # 结束逻辑
         # 1. 一开始就没有翻页
         # 2. 唯一获取 page-item-next
@@ -46,7 +45,6 @@ def get_cars(brand_name, start_url):
             car['price'] = car_tag.find(class_='font-arial').get_text(strip=True)
             # @TODO 颜色还有问题
             for car_attr_tag  in car_tag.find('ul', class_='lever-ul').find_all('li'):
-                #print car_attr_tag
                 car_attr = car_attr_tag.get_text(',',strip=True)
                 if len(car_attr.split(u'：')) < 2 :
                     continue

@@ -21,12 +21,8 @@ result = requests.get(start_url, headers=headers)
 html_content = result.content
 html_content = html_content.decode('gbk').encode('utf-8')
 # @TODO 保存原始文档
-# @TODO beautifulsoup 设置解析器（不然迁移可能出错）
+# beautifulsoup 设置解析器（不然迁移可能出错）
 html_content_soup = BeautifulSoup(html_content,'html.parser')
-print type(html_content_soup)
-# 提取品牌链接
-# 品牌名称和链接
-# ? 这里也不知道为什么 class 不用加 class_ = "cartree"
 brands_tag =  html_content_soup.find_all('li')
 
 
@@ -34,8 +30,6 @@ for brand_tag in brands_tag:
     cars = []
     brand_name  = brand_tag.get_text(',').split(',')[0]
     brand_href = domain + brand_tag.a['href']
-    #print u' 品牌名称为:', brand_name
-    #print u' 品牌链接为:', brand_href
     cars =  get_cars(brand_name, brand_href)
     # 输出中文问题
     for car in cars:
