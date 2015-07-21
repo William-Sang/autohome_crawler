@@ -33,7 +33,8 @@ def get_cars(brand_name, start_url):
         # 这里搜索id， 必须指定节点（比如这里的div）
         #next_url_tag  = html_content_soup.find("div", {"id":"brandtab-1"}).find(class_='page-item-next')
         print 'next len is ', len(html_content_soup.find_all(class_="page-item-next"))
-        next_url_tag  = html_content_soup.find("div", id="brandtab-1")
+        next_url_tag = html_content_soup.select("#brandtab-1")
+        #next_url_tag  = html_content_soup.find("div", id="brandtab-1")
         print next_url_tag
         exit()
         next_url = domain + next_url_tag['href']
