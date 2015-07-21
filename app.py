@@ -37,7 +37,11 @@ for brand_tag in brands_tag:
     #print u' 品牌名称为:', brand_name
     #print u' 品牌链接为:', brand_href
     cars =  get_cars(brand_name, brand_href)
-    print json.dumps(cars)
+    # 输出中文问题
     for car in cars:
-        output_file.write(json.dumps(car))
+        line = json.dumps(car, encoding="UTF-8", ensure_ascii=False)
+        print type(line)
+        # 输出 Unicode 到文件
+        line = line.encode('UTF-8')
+        output_file.write(line)
         output_file.write('\n')

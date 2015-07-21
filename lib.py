@@ -52,6 +52,8 @@ def get_cars(brand_name, start_url):
                     continue
                 car_attr_key = car_attr.split(u'：')[0]
                 car_attr_value = car_attr.split(u'：')[1]
+                # 直接空格无效，因为gbk无法转换'\xa0'字符(http://www.educity.cn/wenda/350839.html)
+                car_attr_key = car_attr_key.replace(u'\xa0', '')
                 car[car_attr_key] = car_attr_value.strip(',')
             cars.append(car)
         time.sleep(wait_sec)
