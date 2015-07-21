@@ -20,7 +20,7 @@
 	# pip install -r requirements
 	```
 	
-3. 修改配置
+3. 修改配置(如果有需要)
 
 
     ```
