@@ -28,7 +28,7 @@
 1. clone 本项目
 
     ```
-# git clone git@github.com:William-Sang/autohome_crawler.git
+# git clone https://github.com/William-Sang/autohome_crawler.git
 ```
 2. 配置依赖
 
